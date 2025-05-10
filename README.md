@@ -1,114 +1,167 @@
-Conversational RAG with PDF Upload and Chat History
-This is a Streamlit-based web application that allows users to upload PDF files, ask questions about their content, and maintain a conversation history. It uses a Retrieval-Augmented Generation (RAG) pipeline powered by LangChain, Groq, and Chroma to provide accurate and context-aware answers.
-Features
 
-PDF Upload: Upload one or more PDF files to extract and process their content.
-Conversational Q&A: Ask questions about the PDFs, and the app retrieves relevant information to answer.
-Chat History: Maintains conversation context, allowing follow-up questions to be understood in context.
-Vector Search: Uses Chroma and HuggingFace embeddings for efficient document retrieval.
-User-Friendly Interface: Built with Streamlit for an intuitive and interactive experience.
-Customizable Sessions: Supports multiple conversation sessions via unique session IDs.
+````markdown
+# Conversational RAG with PDF Upload and Chat History
 
-Tech Stack
+A **Streamlit-based web application** that enables users to upload PDF documents, ask context-aware questions about their content, and maintain a chat history. It leverages a **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain**, **Groq**, and **Chroma** to provide accurate and contextually relevant responses.
 
-Python: Core programming language.
-Streamlit: Web app framework for the user interface.
-LangChain: Orchestrates the RAG pipeline, including retrieval and history-aware question answering.
-Groq: Provides the language model (Gemma2-9b-It) for generating answers.
-Chroma: Vector database for storing and retrieving document embeddings.
-HuggingFace BGE Embeddings: Converts text to numerical vectors for similarity search.
-PyPDFLoader: Extracts text from PDF files.
+---
 
-Prerequisites
-Before running the app, ensure you have:
+## 🚀 Features
 
-Python 3.8 or higher installed.
-A Groq API key (sign up at x.ai to obtain one).
-Git installed for cloning the repository.
-A virtual environment (recommended) to manage dependencies.
+- **PDF Upload**: Upload one or more PDF files and extract their text content.
+- **Conversational Q&A**: Ask questions about the uploaded documents and get smart, context-based answers.
+- **Chat History**: Maintains conversational flow and remembers previous questions for follow-ups.
+- **Vector Search**: Uses Chroma and HuggingFace embeddings for efficient retrieval of relevant chunks.
+- **User-Friendly Interface**: Intuitive UI built with Streamlit.
+- **Customizable Sessions**: Identify and track individual sessions with unique session IDs.
 
-Installation
+---
 
-Clone the Repository:
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+## 🛠 Tech Stack
 
+- **Python** – Core language for backend logic.
+- **Streamlit** – For building the interactive front-end.
+- **LangChain** – Manages RAG pipeline and conversation memory.
+- **Groq (Gemma2-9b-It)** – Language model for answering questions.
+- **Chroma** – Vector database to index and retrieve document embeddings.
+- **HuggingFace BGE Embeddings** – Converts text into dense vectors for similarity matching.
+- **PyPDFLoader** – Parses and extracts text from PDF files.
 
-Set Up a Virtual Environment (optional but recommended):
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+---
 
+## 📦 Prerequisites
 
-Install Dependencies:
-pip install -r requirements.txt
+Before getting started, make sure you have:
 
-If a requirements.txt file doesn't exist, install the required packages manually:
-pip install streamlit langchain langchain-community langchain-groq chromadb sentence-transformers pypdf
+- Python 3.8 or higher
+- Groq API key 
+- Git
+- Virtual environment (optional, but recommended)
 
+---
 
-Run the Application:
-streamlit run app.py
+## 📥 Installation
 
-Replace app.py with the name of your Python script (e.g., main.py if you renamed it).
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+````
 
+2. **Set Up a Virtual Environment (optional):**
 
-Usage
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
+   ```
 
-Launch the App:
+3. **Install Dependencies:**
 
-After running streamlit run app.py, the app opens in your default browser (usually at http://localhost:8501).
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+   If `requirements.txt` is missing:
 
-Enter Groq API Key:
+   ```bash
+   pip install streamlit langchain langchain-community langchain-groq chromadb sentence-transformers pypdf
+   ```
 
-Input your Groq API key in the provided text box (it’s hidden for security).
+4. **Run the Application:**
 
+   ```bash
+   streamlit run app.py
+   ```
 
-Set Session ID:
+   Replace `app.py` with your script filename if different.
 
-Enter a unique session ID (e.g., user1_session) or use the default (default_session) to track your conversation.
+---
 
+## 💡 Usage
 
-Upload PDFs:
+1. Launch the app using `streamlit run app.py`.
+2. It will open in your browser at `http://localhost:8501`.
+3. Enter your **Groq API key** in the secure input field.
+4. Specify a **Session ID** or use the default (`default_session`).
+5. Upload one or more **PDF files**.
+6. Start asking questions about the PDF contents.
+7. View ongoing **chat history** in the expandable sidebar section.
 
-Upload one or more PDF files using the file uploader.
+---
 
+## 🧪 Example Interaction
 
-Ask Questions:
+* **Uploaded PDF**: A document about machine learning
 
-Type your question about the PDF content in the text input field.
-The app retrieves relevant document chunks and provides a concise answer.
-View the conversation history in the expandable "Chat History" section.
+* **Q**: "What is supervised learning?"
 
+* **A**: "Supervised learning is a type of machine learning where the model is trained on labeled data, with input-output pairs, to predict outcomes for new data."
 
+* **Q**: "Can you give an example?"
 
-Example
+* **A**: "An example of supervised learning is email spam detection, where the model learns from labeled emails (spam or not spam) to classify new emails."
 
-Uploaded PDF: A document about machine learning.
-Question: "What is supervised learning?"
-Response: "Supervised learning is a type of machine learning where the model is trained on labeled data, with input-output pairs, to predict outcomes for new data."
-Follow-Up Question: "Can you give an example?"
-Response: "An example of supervised learning is email spam detection, where the model learns from labeled emails (spam or not spam) to classify new emails."
+---
 
-Project Structure
-your-repo-name/
+## 📁 Project Structure
+
+```
+RAG-QnA-from-pdf-with-chat-history/
 ├── app.py              # Main Streamlit app script
-├── .gitignore          # Ignores virtual env, temporary files, etc.
 ├── README.md           # This file
-└── requirements.txt    # (Optional) List of dependencies
+└── requirements.txt    # List of Python dependencies
+```
 
-Contributing
-Contributions are welcome! To contribute:
+---
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Make your changes and commit (git commit -m "Add your feature").
-Push to the branch (git push origin feature/your-feature).
-Open a pull request.
+## 📸 Screenshots
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-For questions or feedback, feel free to open an issue on GitHub or contact your-email@example.com.
+Include screenshots or GIFs of your working demo here:
 
-Built with ❤️ using Streamlit and LangChain.
+![Screenshot 1](images/img1.png)
+![Screenshot 2](images/img2.png)
+
+> Tip: Upload your images to the repo or link to externally hosted images.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+1. Fork the repository.
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make your changes and commit:
+
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push the branch:
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request 🚀
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for more details.
+
+---
+
+## 📬 Contact
+
+Have questions or feedback?
+Open an issue or reach out at: **[satyampant420.com](mailto:satyampant420.com)**
+
+---
+
+**Built with ❤️ using Streamlit, LangChain, and Groq**
+
