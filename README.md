@@ -1,5 +1,5 @@
 
-````markdown
+
 # Conversational RAG with PDF Upload and Chat History
 
 A **Streamlit-based web application** that enables users to upload PDF documents, ask context-aware questions about their content, and maintain a chat history. It leverages a **Retrieval-Augmented Generation (RAG)** pipeline using **LangChain**, **Groq**, and **Chroma** to provide accurate and contextually relevant responses.
