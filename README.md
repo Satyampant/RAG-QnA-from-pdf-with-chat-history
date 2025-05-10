@@ -44,9 +44,9 @@ Before getting started, make sure you have:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-````
+   git clone https://github.com/Satyampant/RAG-QnA-from-pdf-with-chat-history.git
+   cd RAG-QnA-from-pdf-with-chat-history
+    ````
 
 2. **Set Up a Virtual Environment (optional):**
 
@@ -72,9 +72,6 @@ Before getting started, make sure you have:
    ```bash
    streamlit run app.py
    ```
-
-   Replace `app.py` with your script filename if different.
-
 ---
 
 ## 💡 Usage
@@ -116,12 +113,8 @@ RAG-QnA-from-pdf-with-chat-history/
 
 ## 📸 Screenshots
 
-Include screenshots or GIFs of your working demo here:
-
 ![Screenshot 1](images/img1.png)
 ![Screenshot 2](images/img2.png)
-
-> Tip: Upload your images to the repo or link to externally hosted images.
 
 ---
 
